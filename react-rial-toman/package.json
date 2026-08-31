@@ -1,0 +1,62 @@
+{
+  "name": "react-rial-toman",
+  "version": "0.2.0",
+  "description": "Themeable, live thousands-grouping input and Rial/Toman conversion & number-to-words components for React, built for Iranian currency UIs.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts && cp src/styles.css dist/style.css",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "react",
+    "rial",
+    "toman",
+    "iran",
+    "iranian",
+    "currency",
+    "money",
+    "input",
+    "formatter",
+    "thousands-separator",
+    "persian",
+    "farsi"
+  ],
+  "author": "Ali Amiri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliiamirii/react-rial-toman.git"
+  },
+  "homepage": "https://github.com/aliiamirii/react-rial-toman#readme",
+  "bugs": {
+    "url": "https://github.com/aliiamirii/react-rial-toman/issues"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "react": "^18.3.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^2.0.0"
+  }
+}
